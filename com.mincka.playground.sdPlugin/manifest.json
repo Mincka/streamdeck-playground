@@ -1,0 +1,65 @@
+{
+	"Name": "Playground",
+	"Version": "0.1.0.0",
+	"Author": "Julien Ehrhart",
+	"Actions": [
+		{
+			"Name": "Counter",
+			"UUID": "com.mincka.playground.increment",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "Displays a count, which increments by one on press.",
+			"PropertyInspectorPath": "ui/increment-counter.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+        {
+            "UUID": "com.mincka.playground.now-playing",
+            "Name": "Now Playing",
+			"Icon": "imgs/actions/counter/icon",
+            "Controllers": ["Keypad", "Encoder"],
+            "Encoder": {
+                "layout": "$A0",
+				"TriggerDescription": {
+                    "Rotate": "Display image"                }
+            },			
+            "Tooltip": "Displays the content of a text file on the Stream Deck+ screen",
+            "States": [
+                {
+					"Image": "imgs/actions/counter/key",
+                    "TitleAlignment": "middle"
+                }
+            ]
+        }							
+	],
+	"Category": "Playground",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "Playground of actions",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.4"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "10.15"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "com.mincka.playground"
+}
